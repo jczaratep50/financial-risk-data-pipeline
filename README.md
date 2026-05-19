@@ -36,7 +36,13 @@ Main objectives:
 ## ETL Workflow
 
 1. A CSV file is uploaded to the `incoming/` folder in the raw S3 bucket.
+
+![S3 Incoming Structure](project_screenshots/s3/s3-incoming-folder-structure.png)
+
 2. Amazon S3 automatically triggers the AWS Lambda function.
+
+![Environment Variables](project_screenshots/lambda/lambda-environment-variables.png)
+
 3. The Lambda function:
    - Reads the CSV file
    - Validates required columns
@@ -45,7 +51,12 @@ Main objectives:
 4. Processed files are stored in the processed S3 bucket under `clean/`.
 5. Successfully processed source files are moved to `archive/`.
 6. Invalid files are moved to `errors/`.
+
+![Processed bucket folders](project_screenshots/s3/s3-processed-bucket-structure.png)
+
 7. Execution logs are stored in Amazon CloudWatch.
+
+![CloudWatch Logs - ETL](project_screenshots/cloudwatch/cloudwatch-etl-logs.png)
 
 ## Financial Risk Calculations
 
