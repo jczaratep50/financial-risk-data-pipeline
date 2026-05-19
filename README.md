@@ -11,3 +11,4 @@ Main objectives:
 - Create a portfolio-ready cloud/data engineering project
 
 ## Architecture
+![Architecture Diagram](architecture/Architecture Diagram.png)
